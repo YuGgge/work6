@@ -1,0 +1,51 @@
+#设置环境
+server:
+  port: 10001
+
+spring:
+  #允许循环引用
+  main:
+    allow-circular-references: true
+    web-application-type: reactive
+  application:
+    name: gateway
+  profiles:
+    include: local
+
+  cloud:
+    gateway:
+      routes:
+        ##用户
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/user/**
+        ##视频
+        - id: video-service
+          uri: lb://video-service
+          predicates:
+            - Path=/video/**, /image/**
+        ##评论
+        - id: comment-service
+          uri: lb://comment-service
+          predicates:
+            - Path=/comment/**
+        ##喜欢
+        - id: like-service
+          uri: lb://like-service
+          predicates:
+            - Path=/like/**
+        - id: follow-service
+          uri: lb://follow-service
+          predicates:
+            - Path=/following/**, /relation/**, /follower/**, /friends/**
+        ##事务处理
+        - id: transaction-service
+          uri: lb://transaction-service
+          predicates:
+            - Path=/transaction/**
+
+
+
+
+

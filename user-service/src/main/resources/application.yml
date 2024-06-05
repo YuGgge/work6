@@ -1,0 +1,40 @@
+#设置环境
+server:
+  port: 8081
+
+spring:
+  #允许循环引用
+  main:
+    allow-bean-definition-overriding: true
+    allow-circular-references: true
+    web-application-type:
+  profiles:
+    include: local
+  application:
+    name: user-service
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

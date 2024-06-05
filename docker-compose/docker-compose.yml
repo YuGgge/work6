@@ -1,0 +1,56 @@
+version: "3"
+services:
+  user-service:
+    image: user-service
+    container_name: user-service
+    ports:
+      - "8081:8081"
+    networks:
+      - work6-net
+
+  video-service:
+    image: video-service
+    container_name: video-service
+    ports:
+      - "8085:8085"
+    networks:
+      - work6-net
+  transaction-service:
+    image: transaction-service
+    container_name: transaction-service
+    ports:
+      - "8083:8083"
+    networks:
+      - work6-net
+  like-service:
+    image: like-service
+    container_name: like-service
+    ports:
+      - "8087:8087"
+    networks:
+      - work6-net
+
+  follow-service:
+    image: follow-service
+    container_name: follow-service
+    ports:
+      - "8088:8088"
+    networks:
+      - work6-net
+
+  comment-service:
+    image: comment-service
+    container_name: comment-service
+    ports:
+      - "8086:8086"
+    networks:
+      - work6-net
+  gateway:
+    image: gateway
+    container_name: gateway
+    ports:
+      - "10001:10001"
+    networks:
+      - work6-net
+networks:
+  work6-net:

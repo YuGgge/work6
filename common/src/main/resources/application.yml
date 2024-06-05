@@ -1,0 +1,40 @@
+#设置环境
+server:
+  port: 8079
+
+spring:
+  application:
+    name: zy-common
+  profiles:
+    include: local
+
+  # 数据库配置
+  datasource:
+    url: jdbc:mysql://${host.database.ip}:3306/westtext?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: ${host.database.pwd}
+    type: com.alibaba.druid.pool.DruidDataSource
+
+    #数据库连接池
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  #redis配置
+  redis:
+    host: ${host.redis.ip}
+    port: 6379
+    password: ${host.redis.pwd}
+
+
+#mybatisplus配置
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: assign_id
+      logic-delete-field: deleted
+      logic-not-delete-value: 0
+      logic-delete-value: 1
+logging:
+  level:
+    com.zhang: debug
+
+
+

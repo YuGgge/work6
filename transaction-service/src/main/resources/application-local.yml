@@ -1,0 +1,17 @@
+
+
+
+image:
+  basePath: D:\IdeaProjects\work4-file
+  urlPath: http://localhost:8080
+
+jwt:
+  key: locl   #密钥是4倍数
+
+host:
+  database:
+    ip: localhost
+    pwd: zy112500
+  redis:
+    ip: 127.0.0.1
+    pwd:    #密码为空

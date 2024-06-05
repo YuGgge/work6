@@ -1,0 +1,15 @@
+
+image:
+  basePath: /home/work4/work4-file
+  urlPath: http://39.101.207.21:8686
+
+jwt:
+  key: alyn     #密钥是4倍数
+
+host:
+  database:
+    ip: 39.101.207.21
+    pwd: Yj20o48zLkCwI1h
+  redis:
+    ip: 39.101.207.21
+    pwd: Yj20o48zLkCwI1h112500

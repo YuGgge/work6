@@ -1,0 +1,27 @@
+#设置环境
+server:
+  port: 8087
+
+spring:
+  #允许循环引用
+  main:
+    allow-circular-references: true
+  application:
+    name: like-service
+  profiles:
+    include: local
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

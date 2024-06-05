@@ -1,0 +1,26 @@
+#设置环境
+server:
+  port: 8086
+
+spring:
+  #允许循环引用
+  main:
+    allow-circular-references: true
+  application:
+    name: comment-service
+  profiles:
+    include: aliyun
+
+
+
+
+
+
+
+
+
+
+
+
+
+

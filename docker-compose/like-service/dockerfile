@@ -1,0 +1,11 @@
+# 使用 OpenJDK 8 作为基础镜像
+FROM openjdk:8
+
+# 复制 Java JAR 文件到容器中
+COPY like-service.jar /like-service.jar
+
+# 暴露应用程序使用的端口（如果需要）
+EXPOSE 8087
+
+# 定义容器启动时执行的命令
+CMD ["java", "-jar", "like-service.jar"]
