@@ -1,0 +1,11 @@
+#设置环境
+spring:
+  profiles:
+    include: local
+  #redis配置
+  redis:
+    host: ${host.redis.ip}
+    port: 6379
+    password: ${host.redis.pwd}
+
+
